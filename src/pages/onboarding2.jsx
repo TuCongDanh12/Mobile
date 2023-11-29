@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Dimensions } from 'react-native';
-import Onboarding from './src/Component/Onboarding';
+import Onboarding from '../Component/Onboarding';
 
 export default function App() {
   const { height: screenHeight } = Dimensions.get('window');
@@ -11,9 +11,9 @@ export default function App() {
 
         <Onboarding 
           
-          heading={"Chào mừng đến với LocaCheck"}
-          source={require('./assets/images/onboarding1.png')}
-          title={"Khám phá thế giới xung quanh bạn và chia sẻ những khoảnh khắc đặc biệt với chúng tôi."}
+          heading={"Kết Nối Không Gian"}
+          source={require('../../assets/images/onboarding2.png')}
+          title={"Chúng tôi sử dụng công nghệ để giúp bạn kết nối với những địa điểm độc đáo xung quanh bạn."}
         >
             Tiếp tục
         </Onboarding>
