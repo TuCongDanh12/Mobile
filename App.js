@@ -1,23 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Dimensions } from 'react-native';
-import Onboarding from './src/Component/Onboarding';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Onboarding2 from "./src/pages/onboarding2";
+import Onboarding1 from "./src/pages/onboarding1";
+import Onboarding3 from "./src/pages/onboarding3";
 
 export default function App() {
-  const { height: screenHeight } = Dimensions.get('window');
+  const Stack = createNativeStackNavigator();
 
   return (
-    <View style={{flex:1}}>
-        
-
-        <Onboarding 
-          
-          heading={"Chào mừng đến với LocaCheck"}
-          source={require('./assets/images/onboarding1.png')}
-          title={"Khám phá thế giới xung quanh bạn và chia sẻ những khoảnh khắc đặc biệt với chúng tôi."}
-        >
-            Tiếp tục
-        </Onboarding>
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Onboarding1" screenOptions={{headerShown:false}}>
+      <Stack.Group>
+        <Stack.Screen name="Onboarding1" component={Onboarding1} />
+        <Stack.Screen name="Onboarding2" component={Onboarding2} />
+        <Stack.Screen name="Onboarding3" component={Onboarding3} />
+      </Stack.Group>
+    </Stack.Navigator>
+     </NavigationContainer>
   );
 }
 

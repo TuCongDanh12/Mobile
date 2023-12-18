@@ -1,23 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Dimensions } from 'react-native';
-import Onboarding from '../Component/Onboarding';
+import {View, SafeAreaView} from "react-native";
+import Onboarding from "../Component/Onboarding";
 
-export default function App() {
-  const { height: screenHeight } = Dimensions.get('window');
+export default function Onboarding2({navigation}) {
 
   return (
-    <View style={{flex:1}}>
-        
-
-        <Onboarding 
-          
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#FCE5EB" }}>
+      <View style={{ flex: 1 }}>
+        <Onboarding
           heading={"Kết Nối Không Gian"}
-          source={require('../../assets/images/onboarding2.png')}
-          title={"Chúng tôi sử dụng công nghệ để giúp bạn kết nối với những địa điểm độc đáo xung quanh bạn."}
+          source={require("../../assets/images/onboarding2.png")}
+          title={
+            "Chúng tôi sử dụng công nghệ để giúp bạn kết nối với những địa điểm độc đáo xung quanh bạn."
+          }
+          selectedIndex={2}
+          onPress={() => {
+            navigation.navigate("Onboarding3");
+          }}
         >
-            Tiếp tục
+          Tiếp tục
         </Onboarding>
-    </View>
+      </View>
+    </SafeAreaView>
   );
 }
 
