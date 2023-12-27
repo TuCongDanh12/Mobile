@@ -5,6 +5,7 @@ import Onboarding1 from "./src/pages/onboarding1";
 import Onboarding3 from "./src/pages/onboarding3";
 import HomePage from "./src/pages/HomePage/index";
 import SeeAll from "./src/pages/SeeAll";
+import Search from "./src/pages/Search";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -15,6 +16,8 @@ export default function App() {
       <Stack.Group>
         <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="SeeAll" component={SeeAll} />
+        <Stack.Screen name="Search" component={Search} />
+
         {/* <Stack.Screen name="Onboarding1" component={Onboarding1} />
         <Stack.Screen name="Onboarding2" component={Onboarding2} />
         <Stack.Screen name="Onboarding3" component={Onboarding3} /> */}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import {MagnifyingGlassIcon} from 'react-native-heroicons/outline'
+import { useNavigation } from '@react-navigation/native'
 
 import tw from 'twrnc';
 import Trending from '../../Component/Trending';
@@ -11,6 +12,7 @@ import List from '../../Component/List';
 const ios = Platform.OS === 'ios';
 
 export default function HomePage() {
+  const navigation = useNavigation();
 
   const [trending, setTrending] = useState([1,2,3,4,5]);
   const [propose, setPropose] = useState([1,2,3,4,5]);
@@ -25,13 +27,13 @@ export default function HomePage() {
           <View>
           <Image
             source={require('../../../assets/images/Logo.png')}
-            style={{ height: 34, aspectRatio: 104 / 31}}
+            style={{ height: 24, aspectRatio: 104 / 31}}
           />
           </View>
           
               
           <TouchableOpacity onPress={()=> navigation.navigate('Search')}>
-          <MagnifyingGlassIcon size="22" strokeWidth={2.5} color="#3C3C43" />
+          <MagnifyingGlassIcon size="24" strokeWidth={2.5} color="#3C3C43" />
           </TouchableOpacity>
           </View>
 
