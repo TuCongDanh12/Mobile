@@ -27,7 +27,7 @@ export default function HomePage() {
           <View>
           <Image
             source={require('../../../assets/images/Logo.png')}
-            style={{ height: 24, aspectRatio: 104 / 31}}
+            style={{ height: 30, aspectRatio: 104 / 31}}
           />
           </View>
           
