@@ -36,7 +36,7 @@ export default function History({ navigation }) {
           <View style={styles.item}>
             <View style={styles.square}>
               <Image
-                source={require("../images/background.jpg")}
+                source={require("../../../assets/images/Logo.png")}
                 style={styles.image}
               />
             </View>
