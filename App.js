@@ -9,16 +9,20 @@ import History from "./src/pages/History/history";
 import ChangePassword from "./src/pages/ChangePassWord/changePassword";
 import Setting from "./src/pages/Setting/setting";
 import UserInfor from "./src/pages/UserInfor/UserInformation";
+import User_Infor from "./src/pages/User_infor/user_infor";
+import Infor from "./src/pages/Infor/Infor";
 import HomePage from "./src/pages/HomePage";
 import Search from "./src/pages/Search";
 import SeeAll from "./src/pages/SeeAll";
+import ScanQR from "./src/pages/ScanQR/scanQR";
+
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
 
       <Stack.Navigator
-        initialRouteName="Search"
+        initialRouteName="Onboarding1"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Group>
@@ -31,9 +35,12 @@ export default function App() {
           <Stack.Screen name="ChangePassword" component={ChangePassword} />
           <Stack.Screen name="Setting" component={Setting} />
           <Stack.Screen name="UserInfor" component={UserInfor} />
+          <Stack.Screen name="User_Infor" component={User_Infor} />
+          <Stack.Screen name="Infor" component={Infor} />
           <Stack.Screen name="HomePage" component={HomePage} />
           <Stack.Screen name="SeeAll" component={SeeAll} />
           <Stack.Screen name="Search" component={Search} />
+          <Stack.Screen name="ScanQR" component={ScanQR} />
         </Stack.Group>
       </Stack.Navigator>
 

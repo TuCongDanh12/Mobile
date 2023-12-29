@@ -9,7 +9,7 @@ export default function User_Infor() {
         <View style={{alignItems:'center',justifyContent:'center', flex:2.5,flexDirection:'column'}}>
         
         <Image //avatar
-            source={require("../../assets/images/ava.png")}
+            source={require("../../../assets/images/ava.png")}
             style={{width:150, height:150,
             borderRadius:100,
             marginTop:20 }}
@@ -20,7 +20,7 @@ export default function User_Infor() {
             style={{padding:10, borderRadius:100, backgroundColor:'#EEEEEE',bottom:40,left:50}} 
             onPress={() => console.log("cam")
         }>
-        <Image source={require("../../assets/icons/camera.png")} style={{width:30, height:30}}/>
+        <Image source={require("../../../assets/icons/camera.png")} style={{width:30, height:30}}/>
         </TouchableOpacity> 
 
         <Text style={{fontWeight:'bold', fontSize:25, marginTop:20, bottom:50}}>
@@ -33,32 +33,32 @@ export default function User_Infor() {
 
         <TouchableOpacity onPress={() => console.log("user_infor")}> 
             <View style={styles.box}>
-            <Image source={require("../../assets/icons/user.png")} style={{width:30, height:30, justifyContent:'center'}}/>
+            <Image source={require("../../../assets/icons/user.png")} style={{width:30, height:30, justifyContent:'center'}}/>
             <Text style={{fontSize:20, justifyContent:'center', marginRight:100}}>Thông tin tài khoản</Text>
-            <Image source={require("../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
+            <Image source={require("../../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
             </View>
         </TouchableOpacity>
 
 
         <TouchableOpacity onPress={() => console.log("history")}>
             <View style={styles.box}>
-                <Image source={require("../../assets/icons/book.png")} style={{width:30, height:30, justifyContent:'center'}}/>
+                <Image source={require("../../../assets/icons/book.png")} style={{width:30, height:30, justifyContent:'center'}}/>
                 <Text style={{fontSize:20, justifyContent:'center', marginRight:120}}>Nhật ký check in</Text>
-                <Image source={require("../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
+                <Image source={require("../../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
             </View>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => console.log("setting")}>
             <View style={styles.box}>
-                <Image source={require("../../assets/icons/settings.png")} style={{width:30, height:30, justifyContent:'center'}}/>
+                <Image source={require("../../../assets/icons/settings.png")} style={{width:30, height:30, justifyContent:'center'}}/>
                 <Text style={{fontSize:20, justifyContent:'center', marginRight:205}}>Cài đặt</Text>
-                <Image source={require("../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
+                <Image source={require("../../../assets/icons/next.png")} style={{width:15, height:15, justifyContent:'center', marginRight:20}}/>
             </View>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => console.log("logout")}>
             <View style={{flexDirection:'row', padding:10,marginLeft:5, justifyContent:'center'}}>
-                <Image source={require("../../assets/icons/exit.png")} style={{width:30, height:30, justifyContent:'center'}} tintColor={'red'}/>
+                <Image source={require("../../../assets/icons/exit.png")} style={{width:30, height:30, justifyContent:'center'}} tintColor={'red'}/>
                 <Text style={{fontSize:20, justifyContent:'center',marginLeft:25, color:'red'}}>Đăng xuất</Text>
             </View>
         </TouchableOpacity>
@@ -66,18 +66,18 @@ export default function User_Infor() {
 
         <View style={styles.footer}>
         <TouchableOpacity style={styles.footernode} onPress={() => console.log("home")}>
-            <Image source={require("../../assets/icons/home.png")} style={{width:25, height:25,}}/>
+            <Image source={require("../../../assets/icons/home.png")} style={{width:25, height:25,}}/>
             <Text style={{fontSize:7,}}>Trang chủ</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.footernode} onPress={() => console.log("acount")}>
-            <Image source={require("../../assets/icons/user.png")} style={{width:25, height:25}}/>
+            <Image source={require("../../../assets/icons/user.png")} style={{width:25, height:25}}/>
             <Text style={{fontSize:7}}>Tài khoản</Text>
         </TouchableOpacity>
         </View>
 
         <TouchableOpacity style={styles.scanbutton} onPress={() => console.log("scan")}>
-            <Image source={require("../../assets/icons/qr.png")} style={{width:50, height:50}}/>
+            <Image source={require("../../../assets/icons/qr.png")} style={{width:50, height:50}}/>
         </TouchableOpacity>
 
 

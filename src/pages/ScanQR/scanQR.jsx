@@ -5,7 +5,7 @@ export default function ScanQR() {
     return (
     <SafeAreaView style={styles.container}>
 
-        <View style={{ backgroundColor: '#FFE5ED',width:120 }}>
+        <View style={{ backgroundColor: '#FFE5ED',width:120, marginTop:15 }}>
             <Ionicons.Button
             name="arrow-back-outline" 
             size={20} 
@@ -24,7 +24,7 @@ export default function ScanQR() {
 
 
         <View style={{alignItems:'center',backgroundColor:'#FFE5ED',flex:2}}>
-            <Image source={require("../../assets/icons/qr.png")} style={{marginTop:60,width:200, height:200}}/>
+            <Image source={require("../../../assets/icons/qr.png")} style={{marginTop:60,width:200, height:200}}/>
         </View>
 
     
