@@ -16,7 +16,7 @@ export default function App() {
         <Stack.Screen name="Onboarding3" component={Onboarding3} />
       </Stack.Group>
     </Stack.Navigator>
-     </NavigationContainer>
+    </NavigationContainer>
   );
 }
 
