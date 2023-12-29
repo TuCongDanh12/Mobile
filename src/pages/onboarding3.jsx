@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Dimensions, SafeAreaView } from "react-native";
 import Onboarding from "../Component/Onboarding";
 
-export default function Onboarding3() {
+export default function Onboarding3(navigation) {
 
 
   return (
@@ -15,6 +15,9 @@ export default function Onboarding3() {
             "Chụp ảnh, viết cảm nghĩ, và lưu giữ mọi kỷ niệm quý giá từ mỗi chuyến đi. LocaCheck giúp bạn tạo ra album sống động và kỷ niệm không quên."
           }
           selectedIndex={3}
+          onPress={() => {
+            navigation.navigate("HomePage");
+          }}
         >
           Bắt đầu
         </Onboarding>
