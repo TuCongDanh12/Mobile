@@ -16,6 +16,7 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
+
       <Stack.Navigator
         initialRouteName="Search"
         screenOptions={{ headerShown: false }}
@@ -35,6 +36,7 @@ export default function App() {
           <Stack.Screen name="Search" component={Search} />
         </Stack.Group>
       </Stack.Navigator>
+
     </NavigationContainer>
   );
 }
