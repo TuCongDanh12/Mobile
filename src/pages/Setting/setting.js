@@ -33,7 +33,7 @@ export default function Setting({ navigation }) {
             size={24}
             color="#CE5C7D"
             onPress={() => {
-              navigation.navigate("Login");
+              navigation.goBack();
             }}
           />
         </View>

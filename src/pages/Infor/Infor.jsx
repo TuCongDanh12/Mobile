@@ -12,8 +12,9 @@ import {
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Infor() {
+export default function Infor({ navigation }) {
   const [Search, setSearch] = useState("");
+
   return (
     <SafeAreaView style={styles.container}>
       <View
@@ -29,7 +30,7 @@ export default function Infor() {
             size={20}
             backgroundColor={"white"}
             color={"black"}
-            onPress={() => console.log("back")}
+            onPress={() => navigation.goBack()}
           ></Ionicons.Button>
         </View>
 
@@ -78,7 +79,7 @@ export default function Infor() {
           <Text style={{ fontWeight: "bold", fontSize: 15 }}>Bình luận</Text>
         </View>
 
-        <View style={{ flexDirection: "row", padding: 10, height:150 }}>
+        <View style={{ flexDirection: "row", padding: 10, height: 150 }}>
           <Image
             source={require("../../../assets/images/ava.png")}
             style={{ width: 40, height: 40, borderRadius: 100, padding: 10 }}

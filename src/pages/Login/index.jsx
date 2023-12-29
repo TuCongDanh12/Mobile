@@ -9,26 +9,26 @@ import {
 import ButtonLogin from "./../../Component/Button/ButtonLogin";
 import Input from "../../Component/Input";
 import { useForm } from "../../Hooks/useForm";
-export default function Login() {
+export default function Login({ navigation }) {
   const { validate, register, form } = useForm({
     telephonenumber: [{ required: true }],
     password: [{ required: true }],
   });
   const onPress = async (ev) => {
     try {
-      ev.preventDefault()
+      ev.preventDefault();
       if (validate()) {
-        const res = await execute(form)
-        console.log(res)
+        const res = await execute(form);
+        console.log(res);
 
         // setDisable(true)
         // await message.success('Đăng nhập thành công', [2])
         // setDisable(false)
       }
     } catch (err) {
-    //   message.error('Username or Password incorrect', [3])
+      //   message.error('Username or Password incorrect', [3])
     }
-  }
+  };
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={[styles.container, { flex: 1 }]}>
@@ -44,20 +44,21 @@ export default function Login() {
             source={require("../../../assets/images/Logo.png")}
           />
           <Input
-          {...register('telephonenumber',)}
+            {...register("telephonenumber")}
             style={{ width: "90%", marginBottom: 20 }}
             placeholder={"Số điện thoại"}
           />
           <Input
-          {...register('password')}
+            {...register("password")}
             style={{ width: "90%", marginBottom: 20 }}
             type={"password"}
             placeholder={"Mật khẩu"}
           />
 
-          <ButtonLogin 
-          onPress={onPress}
-          style={{ width: "90%", marginBottom: 10 }}>
+          <ButtonLogin
+            onPress={() => navigation.navigate("HomePage")}
+            style={{ width: "90%", marginBottom: 10 }}
+          >
             Đăng nhập
           </ButtonLogin>
         </View>
@@ -106,7 +107,14 @@ export default function Login() {
         </TouchableOpacity>
         <View style={{ flexDirection: "row" }}>
           <Text style={{ paddingHorizontal: 10 }}>Bạn chưa có tài khoản</Text>
-          <Text style={styles.link}>Đăng ký</Text>
+          <Text
+            style={styles.link}
+            onPress={() => {
+              navigation.navigate("Register");
+            }}
+          >
+            Đăng ký
+          </Text>
         </View>
       </View>
     </SafeAreaView>

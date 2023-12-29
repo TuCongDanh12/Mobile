@@ -1,8 +1,7 @@
-import {View, SafeAreaView} from "react-native";
+import { View, SafeAreaView } from "react-native";
 import Onboarding from "../Component/Onboarding";
 
-export default function Onboarding2({navigation}) {
-
+export default function Onboarding2({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FCE5EB" }}>
       <View style={{ flex: 1 }}>

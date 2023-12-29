@@ -20,7 +20,6 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-
       <Stack.Navigator
         initialRouteName="Onboarding1"
         screenOptions={{ headerShown: false }}
@@ -43,7 +42,6 @@ export default function App() {
           <Stack.Screen name="ScanQR" component={ScanQR} />
         </Stack.Group>
       </Stack.Navigator>
-
     </NavigationContainer>
   );
 }
