@@ -1,3 +1,7 @@
+import {
+  height,
+  width,
+} from "deprecated-react-native-prop-types/DeprecatedImagePropType";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -13,12 +17,13 @@ import {
   Image,
 } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
+import tw from "twrnc";
 export default function UserInfor({ navigation }) {
-  const [inputValue, setInputValue] = useState("");
+  const [inputName, setInputName] = useState("Trần Quang Khải");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPhone, setInputPhone] = useState("0123456798");
+  const [inputAddress, setInputAddress] = useState("");
 
-  const handleInputChange = (text) => {
-    setInputValue(text);
-  };
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -42,63 +47,76 @@ export default function UserInfor({ navigation }) {
             <Text style={styles.labels}>Họ tên</Text>
             <View style={styles.input}>
               <TextInput
-                // style={styles.input}
-                //   placeholder="Nhập giá trị"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                style={{ marginLeft: 10 }}
+                value={inputName}
+                onChangeText={(text) => setInputName(text)}
+                editable={false}
+              />
+            </View>
+          </View>
+
+          <View style={styles.item}>
+            <Text style={styles.labels}>Số điện thoại</Text>
+            <View style={styles.input}>
+              <TextInput
+                style={{ marginLeft: 10 }}
+                onChangeText={(text) => setInputPhone(text)}
+                value={inputPhone}
+                editable={false}
               />
             </View>
           </View>
 
           <View style={styles.item}>
             <Text style={styles.labels}>Email</Text>
-            <View style={styles.input}>
+            <View style={styles.input1}>
               <TextInput
-                // style={styles.input}
-                //   placeholder="Nhập giá trị"
-                onChangeText={handleInputChange}
-                value={inputValue}
-              />
-            </View>
-          </View>
-
-          <View style={styles.item}>
-            <Text style={styles.labels}>SDT</Text>
-            <View style={styles.input}>
-              <TextInput
-                // style={styles.input}
-                //   placeholder="Nhập giá trị"
-                onChangeText={handleInputChange}
-                value={inputValue}
-              />
-            </View>
-          </View>
-
-          <View style={styles.item}>
-            <Text style={styles.labels}>CCCD</Text>
-            <View style={styles.input}>
-              <TextInput
-                // style={styles.input}
-                //   placeholder="Nhập giá trị"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                style={{ marginLeft: 10 }}
+                onChangeText={(text) => setInputEmail(text)}
+                value={inputEmail}
               />
             </View>
           </View>
 
           <View style={styles.item}>
             <Text style={styles.labels}>Địa chỉ</Text>
-            <View style={styles.input}>
+            <View style={styles.input1}>
               <TextInput
-                // style={styles.input}
-                //   placeholder="Nhập giá trị"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                style={{ marginLeft: 10 }}
+                onChangeText={(text) => setInputAddress(text)}
+                value={inputAddress}
               />
             </View>
           </View>
         </View>
       </ScrollView>
+      <View
+        style={{
+          padding: 10,
+          borderRadius: 5,
+          alignItems: "center",
+          marginVertical: 10,
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#F8F8F8",
+            borderWidth: 1,
+            borderColor: "#F34584",
+            borderRadius: 5,
+            padding: 10,
+          }}
+        >
+          <Text
+            style={{
+              color: "#F34584",
+              borderColor: "#F34584",
+            }}
+          >
+            Cập nhật thông tin
+          </Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -140,5 +158,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     backgroundColor: "#DDDDDD",
+  },
+  input1: {
+    paddingVertical: 10,
+    borderColor: "gray",
+    borderWidth: 1,
+    borderRadius: 10,
+    marginTop: 10,
+    backgroundColor: "#F8F8F8",
   },
 });
