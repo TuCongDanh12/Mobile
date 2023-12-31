@@ -2,9 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Dimensions, SafeAreaView } from "react-native";
 import Onboarding from "../Component/Onboarding";
 
-export default function Onboarding3(navigation) {
-
-
+export default function Onboarding3({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FCE5EB" }}>
       <View style={{ flex: 1 }}>
