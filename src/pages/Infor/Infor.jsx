@@ -17,33 +17,51 @@ export default function Infor({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginTop: 20,
-        }}
-      >
-        <View>
-          <Ionicons.Button
-            name="arrow-back-outline"
-            size={20}
-            backgroundColor={"white"}
-            color={"black"}
-            onPress={() => navigation.goBack()}
-          ></Ionicons.Button>
-        </View>
-
+      <View style={styles.header}>
         <View
           style={{
+            // flexDirection: "row",
+            // justifyContent: "space-between",
+            // marginTop: 20,
             alignItems: "center",
-            justifyContent: "center",
-            marginRight: 10,
+            // paddingVertical: 20,
+            borderBottomColor: "#DDDDDD",
+            borderBottomWidth: 1,
+            paddingHorizontal: 16,
+            flexDirection: "row",
           }}
         >
-          <Text style={{ fontSize: 20, color: "black", fontWeight: "bold" }}>
-            Thông tin địa điểm
-          </Text>
+          <View>
+            <Ionicons.Button
+              name="arrow-back-outline"
+              size={20}
+              backgroundColor={"white"}
+              color={"black"}
+              onPress={() => navigation.goBack()}
+            ></Ionicons.Button>
+          </View>
+
+          <View
+            style={{
+              // alignItems: "center",
+              // justifyContent: "center",
+              // marginRight: 10,
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 18,
+                color: "black",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
+            >
+              Thông tin địa điểm
+            </Text>
+          </View>
         </View>
       </View>
 
@@ -101,11 +119,12 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     width: "100%",
+    paddingTop: 30,
   },
   input: {
     height: 40,
     width: "80%",
-    padding: 20,
+    paddingLeft: 20,
     borderWidth: 1,
     borderRadius: 30,
     marginHorizontal: 10,
