@@ -36,7 +36,7 @@ export default function History({ navigation }) {
           <View style={styles.item}>
             <View style={styles.square}>
               <Image
-                source={require("../../../assets/images/Logo.png")}
+                source={require("../../../assets/images/background.jpg")}
                 style={styles.image}
               />
             </View>
@@ -51,7 +51,7 @@ export default function History({ navigation }) {
   );
 }
 const styles = StyleSheet.create({
-  container: {},
+  container: { marginTop: 30 },
   header: {
     alignItems: "center",
     paddingVertical: 20,
