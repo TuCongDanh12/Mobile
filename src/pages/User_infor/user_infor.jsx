@@ -83,7 +83,7 @@ export default function User_Infor({ navigation }) {
             />
             <Text
               style={{
-                fontSize: 18,
+                fontSize: 16,
                 justifyContent: "center",
                 color: "red",
               }}

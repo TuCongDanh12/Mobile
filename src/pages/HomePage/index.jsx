@@ -98,18 +98,19 @@ export default function HomePage() {
             borderBottomWidth: 10,
             borderBottomColor: "rgba(0, 0, 0, 0)",
             width: "100%",
-            marginBottom: 100,
+            marginBottom: 80,
           }}
         />
       </ScrollView>
 
-      <SafeAreaView backgroundColor="transparent">
+      <SafeAreaView >
       <View style={{
             flexDirection: "row",
             alignItems: "flex-end",
             justifyContent: "space-between",
             padding: 10,
             height: 80,
+            marginTop:-30,
             backgroundColor: "#ECECEC",
             }}>
                 <TouchableOpacity

@@ -29,7 +29,7 @@ import {
             />
             <Text
               style={{
-                fontSize: 18,
+                fontSize: 16,
                 justifyContent: "center",
               }}
             >

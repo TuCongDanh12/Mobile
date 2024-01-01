@@ -77,6 +77,10 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
   },
+  square:{
+    marginLeft: 10,
+    marginRight: 20
+  },
   header: {
     alignItems: "center",
     paddingVertical: 20,
@@ -98,6 +102,7 @@ const styles = StyleSheet.create({
   body: {
     paddingHorizontal: 18,
     paddingTop: 16,
+    marginBottom:50,
   },
   item: {
     flexDirection: "row",
@@ -107,7 +112,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     borderBottomColor: "#DDDDDD",
     borderBottomWidth: 1,
-    paddingVertical: 9,
+    paddingBottom: 20,
   },
   content: {
     width: "90%",
