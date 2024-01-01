@@ -8,6 +8,9 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import UserInfor from "../UserInfor/UserInformation";
+import SettingList from "../../Component/SettingList/index"
+import tw from "twrnc";
+import Navbar from "../../Component/Navbar/index"
 
 export default function User_Infor({ navigation }) {
   return (
@@ -44,7 +47,7 @@ export default function User_Infor({ navigation }) {
         <Text
           style={{
             fontWeight: "bold",
-            fontSize: 25,
+            fontSize: 20,
             marginTop: 20,
             bottom: 50,
           }}
@@ -54,170 +57,62 @@ export default function User_Infor({ navigation }) {
       </View>
 
       <View style={{ flexDirection: "column", flex: 2.5 }}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate(UserInfor);
-          }}
-        >
-          <View style={styles.box}>
-            <Image
-              source={require("../../../assets/icons/user.png")}
-              style={{ width: 30, height: 30, justifyContent: "center" }}
-            />
-            <Text
-              style={{
-                fontSize: 20,
-                justifyContent: "center",
-                marginRight: 100,
-              }}
-            >
-              Thông tin tài khoản
-            </Text>
-            <Image
-              source={require("../../../assets/icons/next.png")}
-              style={{
-                width: 15,
-                height: 15,
-                justifyContent: "center",
-                marginRight: 20,
-              }}
-            />
-          </View>
-        </TouchableOpacity>
+   
 
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("History");
-          }}
-        >
-          <View style={styles.box}>
-            <Image
-              source={require("../../../assets/icons/book.png")}
-              style={{ width: 30, height: 30, justifyContent: "center" }}
-            />
-            <Text
-              style={{
-                fontSize: 20,
-                justifyContent: "center",
-                marginRight: 120,
-              }}
-            >
-              Nhật ký check in
-            </Text>
-            <Image
-              source={require("../../../assets/icons/next.png")}
-              style={{
-                width: 15,
-                height: 15,
-                justifyContent: "center",
-                marginRight: 20,
-              }}
-            />
-          </View>
-        </TouchableOpacity>
+        
+        <SettingList title="Thông tin tài khoản" icon={require("../../../assets/icons/user.png")} link= {UserInfor}/>
 
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Setting");
-          }}
-        >
-          <View style={styles.box}>
-            <Image
-              source={require("../../../assets/icons/settings.png")}
-              style={{ width: 30, height: 30, justifyContent: "center" }}
-            />
-            <Text
-              style={{
-                fontSize: 20,
-                justifyContent: "center",
-                marginRight: 205,
-              }}
-            >
-              Cài đặt
-            </Text>
-            <Image
-              source={require("../../../assets/icons/next.png")}
-              style={{
-                width: 15,
-                height: 15,
-                justifyContent: "center",
-                marginRight: 20,
-              }}
-            />
-          </View>
-        </TouchableOpacity>
+        <SettingList title="Nhật kí check-in" icon={require("../../../assets/icons/book.png")} link= "History"/>
+
+        <SettingList title="Cài đặt" icon={require("../../../assets/icons/Vector.png")} link= "Setting"/>
 
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Login");
           }}
         >
-          <View
-            style={{
-              flexDirection: "row",
-              padding: 10,
-              marginLeft: 5,
-              justifyContent: "center",
-            }}
-          >
+        
+
+          <View style={tw`flex-row justify-between items-center mx-4 my-3`}>
+            <View style={tw`flex-row`}>
             <Image
               source={require("../../../assets/icons/exit.png")}
-              style={{ width: 30, height: 30, justifyContent: "center" }}
-              tintColor={"red"}
+              style={{ width: 26, height: 26, justifyContent: "center" , marginRight: 20,
+}}              tintColor={"red"}
+
             />
             <Text
               style={{
-                fontSize: 20,
+                fontSize: 18,
                 justifyContent: "center",
-                marginLeft: 25,
                 color: "red",
               }}
             >
               Đăng xuất
             </Text>
+            </View>
+            
+
+            <Image
+              source={require("../../../assets/icons/next.png")}
+              style={{
+                width: 0,
+                height: 0,
+                justifyContent: "center",
+                marginRight: 20,
+              }}
+            />
           </View>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.footer}>
-        <TouchableOpacity
-          style={styles.footernode}
-          onPress={() => {
-            navigation.navigate("HomePage");
-          }}
-        >
-          <Image
-            source={require("../../../assets/icons/home.png")}
-            style={{ width: 25, height: 25 }}
-          />
-          <Text style={{ fontSize: 7 }}>Trang chủ</Text>
-        </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.footernode}
-          onPress={() => {
-            navigation.navigate("User_Infor");
-          }}
-        >
-          <Image
-            source={require("../../../assets/icons/user.png")}
-            style={{ width: 25, height: 25 }}
-          />
-          <Text style={{ fontSize: 7 }}>Tài khoản</Text>
-        </TouchableOpacity>
-      </View>
+<Navbar/>
 
-      <TouchableOpacity
-        style={styles.scanbutton}
-        onPress={() => {
-          navigation.navigate("ScanQR");
-        }}
-      >
-        <Image
-          source={require("../../../assets/icons/qr.png")}
-          style={{ width: 50, height: 50 }}
-        />
-      </TouchableOpacity>
+
+      
+
+      
     </SafeAreaView>
   );
 }
