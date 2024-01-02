@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
   content: {
     width: "80%",
     fontSize: 18,
+    marginLeft:20
   },
   location: {
     fontSize: 18,
