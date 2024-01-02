@@ -19,11 +19,13 @@ const { width, height } = Dimensions.get("window");
 export default function Search() {
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([1, 2, 3, 4, 5]);
-  const [results1, setResults1] = useState([1, 2, 3, 4, 5]);
+  const [results, setResults] = useState([]);
 
   let name = "Thư viện bách khoa";
 
+  const handleSearch=()=>{
+    setResults([1, 2, 3, 4, 5]);
+  }
   return (
     <SafeAreaView style={tw` flex-1`}>
       {/* search input */}
@@ -31,7 +33,7 @@ export default function Search() {
         style={tw`mx-4 mb-3 mt-3 flex-row justify-between items-center border border-neutral-400 rounded-full`}
       >
         <TextInput
-          onChangeText={() => {}}
+          onChangeText={handleSearch}
           placeholder="Tìm kiếm địa điểm"
           placeholderTextColor={"#C8C8C8"}
           style={tw`pb-1 pl-6 flex-1 text-base text-black tracking-wider`}
@@ -63,7 +65,7 @@ export default function Search() {
                 >
                   <View style={tw`mb-8`}>
                     <Image
-                      source={require("../../assets/images/bk.jpg")}
+                      source={require("../../assets/images/bk0.jpg")}
                       style={{
                         width: width * 0.44,
                         height: height * 0.3,
