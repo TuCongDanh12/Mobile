@@ -57,6 +57,7 @@ export default function Infor({ navigation }) {
                 color: "black",
                 fontWeight: "bold",
                 textAlign: "center",
+                marginLeft: -40,
               }}
             >
               Thông tin địa điểm

@@ -18,14 +18,44 @@ const { width, height } = Dimensions.get("window");
 
 export default function Search() {
   const navigation = useNavigation();
-  const [loading, setLoading] = useState(false);
   const [results, setResults] = useState([]);
 
   let name = "Thư viện bách khoa";
-
-  const handleSearch=()=>{
-    setResults([1, 2, 3, 4, 5]);
+  const locaList = [
+    {
+        img: "https://photo-cms-giaoduc.epicdn.me/w700/Uploaded/2023/lwivvpiv/2022_07_10/gdvn-neu-17-8049.jpg",
+        name: 'Hội trường bách khoa',
+    },
+    {
+        img: "https://thanhnien.mediacdn.vn/Uploaded/haanh/2022_06_29/img-0130-398.jpg",
+        name: 'Đại học bách khoa HCM',
+    },
+    {
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfjE2QRFg34SO6KoMtWYOqr9xs2b7uCCNEw&usqp=CAU",
+        name: 'Thư viện',
+    },
+    {
+        img: "https://cafefcdn.com/203337114487263232/2023/10/31/1-1620-1698718053767-16987180543791191312606.jpg",
+        name: 'Nhà ăn bách khoa',
+    },
+    {
+      img: "https://lawnet.vn/uploads/image/2020/10/29/Phong-thi-nghiem-nghien-cuu-SV-bien-doi-gen-phai-co-it-nhat-7-can-bo-co-huu.jpg",
+      name: 'Phòng thí nghiệm',
+  },
+];
+const handleSearch = (searchTerm) => {
+  // Filter the data based on the search term
+  if(searchTerm=="")   setResults([]);
+  else{
+    const filtered = locaList.filter(item =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    // Update the state with the filtered data
+    setResults(filtered);
   }
+  
+};
+
   return (
     <SafeAreaView style={tw` flex-1`}>
       {/* search input */}
@@ -65,15 +95,15 @@ export default function Search() {
                 >
                   <View style={tw`mb-8`}>
                     <Image
-                      source={require("../../assets/images/bk0.jpg")}
-                      style={{
+                  source={{ uri: item.img}}
+                  style={{
                         width: width * 0.44,
                         height: height * 0.3,
                         borderRadius: 10,
                       }}
                     />
                     <Text style={tw`mt-1 ml-1 font-medium`}>
-                      {name.length > 21 ? name.slice(0, 21) + "..." : name}
+                    {item.name.length > 19 ? item.name.slice(0, 19) + "..." : item.name}
                     </Text>
                   </View>
                 </TouchableWithoutFeedback>
