@@ -14,7 +14,7 @@ export default function Onboarding3({ navigation }) {
           }
           selectedIndex={3}
           onPress={() => {
-            navigation.navigate("HomePage");
+            navigation.navigate("Login");
           }}
         >
           Bắt đầu
