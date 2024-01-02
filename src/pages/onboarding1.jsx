@@ -1,10 +1,10 @@
-import {View, SafeAreaView } from "react-native";
+import { View, SafeAreaView } from "react-native";
 import Onboarding from "../Component/Onboarding";
 
 export default function Onboarding1({ navigation }) {
   return (
-    <SafeAreaView style={{flex:1, backgroundColor: '#FCE5EB'}}>
-      <View style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#FCE5EB" }}>
+      <View style={{marginTop:100, flex: 1 }}>
         <Onboarding
           heading={"Chào mừng đến với LocaCheck"}
           source={require("../../assets/images/onboarding1.png")}

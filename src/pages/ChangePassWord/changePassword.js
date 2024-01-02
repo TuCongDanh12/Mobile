@@ -15,6 +15,9 @@ import {
 import Icon from "react-native-vector-icons/Feather";
 export default function ChangePassword({ navigation }) {
   const [inputValue, setInputValue] = useState("");
+  const [inputOldPassword, setInputOldPassword] = useState("");
+  const [inputNewPassword, setInputNewPassword] = useState("");
+  const [inputConfirmPassword, setInputConfirmPassword] = useState("");
 
   const handleInputChange = (text) => {
     setInputValue(text);
@@ -28,7 +31,7 @@ export default function ChangePassword({ navigation }) {
             size={24}
             color="#CE5C7D"
             onPress={() => {
-              navigation.navigate("Login");
+              navigation.goBack();
             }}
           />
         </View>
@@ -43,8 +46,9 @@ export default function ChangePassword({ navigation }) {
             <View style={styles.input}>
               <TextInput
                 placeholder="Mật khẩu hiện tại"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                // onChangeText={handleInputChange}
+                value={inputOldPassword}
+                onChangeText={(text) => setInputOldPassword(text)}
               />
             </View>
           </View>
@@ -54,8 +58,8 @@ export default function ChangePassword({ navigation }) {
             <View style={styles.input}>
               <TextInput
                 placeholder="Mật khẩu mới"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                onChangeText={(text) => setInputNewPassword(text)}
+                value={inputNewPassword}
               />
             </View>
           </View>
@@ -65,13 +69,40 @@ export default function ChangePassword({ navigation }) {
             <View style={styles.input}>
               <TextInput
                 placeholder="Nhập lại mật khẩu mới"
-                onChangeText={handleInputChange}
-                value={inputValue}
+                value={inputConfirmPassword}
+                onChangeText={(text) => setInputConfirmPassword(text)}
               />
             </View>
           </View>
         </View>
       </ScrollView>
+      <View
+        style={{
+          padding: 10,
+          borderRadius: 5,
+          alignItems: "center",
+          marginVertical: 10,
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#F8F8F8",
+            borderWidth: 1,
+            borderColor: "#F34584",
+            borderRadius: 5,
+            padding: 10,
+          }}
+        >
+          <Text
+            style={{
+              color: "#F34584",
+              borderColor: "#F34584",
+            }}
+          >
+            Cập nhật mật khẩu
+          </Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -112,7 +143,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     marginTop: 10,
-    backgroundColor: "#DDDDDD",
+    backgroundColor: "#F8F8F8",
     paddingHorizontal: 18,
   },
 });
