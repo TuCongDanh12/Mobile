@@ -41,8 +41,8 @@ export default function History({ navigation }) {
               />
             </View>
             <View style={styles.content}>
-              <Text style={styles.location}>Nhà ăn B1</Text>
-              <Text style={styles.time}>1:35 PM, 23/11/2023</Text>
+              <Text style={styles.location}>Đại học bách khoa HCM</Text>
+              <Text style={styles.time}>4:50 PM, 1/3/2024</Text>
             </View>
           </View>
         </View>

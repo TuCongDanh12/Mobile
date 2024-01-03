@@ -38,7 +38,10 @@ export default function Register({ navigation }) {
             placeholder={"Nhập lại mật khẩu"}
           />
 
-          <ButtonLogin style={{ width: "90%", marginBottom: 10 }}>
+          <ButtonLogin style={{ width: "90%", marginBottom: 10 }} 
+            onPress={() => {
+              navigation.navigate("Login");
+            }}>
             Đăng kí
           </ButtonLogin>
         </View>

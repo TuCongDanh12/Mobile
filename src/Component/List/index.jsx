@@ -68,7 +68,7 @@ return (
           return (
             <TouchableWithoutFeedback
               key={index}
-              onPress={() => navigation.push("Infor", item)}
+              onPress={() => navigation.push("Infor", { img: item.img, name: item.name})}
             >
               <View style={tw`mt-4 mr-4`}>
                 <Image

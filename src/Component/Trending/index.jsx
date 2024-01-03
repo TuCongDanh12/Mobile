@@ -22,19 +22,19 @@ export default function Trending({ data }) {
   const locaList = [
     {
         img: "https://afamilycdn.com/2018/3/8/img0734-15204757505411296701947-1520476246246316658369.png",
-        name: 'Thư viện',
+        name: 'Đại học nhân văng',
     },
     {
         img: "https://nhavanhoasinhvien.vn/wp-content/uploads/2020/06/q1.jpg",
-        name: 'Nhà ăn bách khoa',
+        name: 'Nhà văn hóa sinh viên',
     },
     {
       img: "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/8/30/8dai-hoc-thuong-mai-1661845920180975824556-1661851373476-16618513736901433869588.jpg",
-      name: 'Phòng thí nghiệm',
+      name: 'Bãi giữ xe',
   },
   {
     img: "https://trangtuyensinh.com.vn/wp-content/uploads/2022/02/b-16027363633051255712834.jpg",
-    name: 'Hội trường bách khoa',
+    name: 'Con đường tình yêu',
 },
 {
     img: "https://thanhnien.mediacdn.vn/Uploaded/haanh/2022_06_29/img-0130-398.jpg",

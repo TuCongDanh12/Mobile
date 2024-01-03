@@ -15,6 +15,8 @@ import HomePage from "./src/pages/HomePage";
 import Search from "./src/pages/Search";
 import SeeAll from "./src/pages/SeeAll";
 import ScanQR from "./src/pages/ScanQR/scanQR";
+import Scanner from "./src/pages/ScanQR/Scanner";
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -40,6 +42,7 @@ export default function App() {
           <Stack.Screen name="SeeAll" component={SeeAll} />
           <Stack.Screen name="Search" component={Search} />
           <Stack.Screen name="ScanQR" component={ScanQR} />
+          <Stack.Screen name="Scanner" component={Scanner} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

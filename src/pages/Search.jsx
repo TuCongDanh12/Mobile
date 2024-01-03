@@ -32,7 +32,7 @@ export default function Search() {
     },
     {
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfjE2QRFg34SO6KoMtWYOqr9xs2b7uCCNEw&usqp=CAU",
-        name: 'Thư viện',
+        name: 'Thư viện bách khoa',
     },
     {
         img: "https://cafefcdn.com/203337114487263232/2023/10/31/1-1620-1698718053767-16987180543791191312606.jpg",
@@ -42,6 +42,18 @@ export default function Search() {
       img: "https://lawnet.vn/uploads/image/2020/10/29/Phong-thi-nghiem-nghien-cuu-SV-bien-doi-gen-phai-co-it-nhat-7-can-bo-co-huu.jpg",
       name: 'Phòng thí nghiệm',
   },
+  {
+    img: "https://cdn.tuoitre.vn/471584752817336320/2023/4/18/vnapotalhanoikhanhthanhduantaitaothuviencongcongdobovanhoathethaovadulichhanquoctaitrostand-1-1681824520003432814812.jpg",
+    name: 'Thư viện trung tâm ĐHQG',
+},
+{
+    img: "https://vuthuvien.bvhttdl.gov.vn/wp-content/uploads/2022/04/PL4.jpg",
+    name: 'Thư viện bách khoa Hà Nội',
+},
+{
+  img: "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/05_2023/nha-hang-hai-san-o-vung-tau-view-dep-cay-bang.jpg",
+  name: 'Nhà ăn bách khoa Hà nội',
+},
 ];
 const handleSearch = (searchTerm) => {
   // Filter the data based on the search term

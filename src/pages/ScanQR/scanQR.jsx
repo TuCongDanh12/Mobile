@@ -11,7 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 export default function ScanQR({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ backgroundColor: "#FFE5ED", width: 120, marginTop: 15 }}>
+      <View style={{ backgroundColor: "#FFE5ED", width: 120, marginTop: 35, marginLeft: 20 }}>
         <Ionicons.Button
           name="arrow-back-outline"
           size={20}
@@ -56,7 +56,9 @@ export default function ScanQR({ navigation }) {
       >
         <TouchableOpacity
           style={styles.button}
-          onPress={() => console.log("Scan")}
+          onPress={() => {
+            navigation.navigate("Scanner");
+          }}
         >
           <Text
             style={{
